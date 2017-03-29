@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  studentId: MyText
+  stoppage: MyText
+  contact: MyText
+  fees: false
+
+two:
+  name: MyText
+  studentId: MyText
+  stoppage: MyText
+  contact: MyText
+  fees: false

@@ -1,0 +1,12 @@
+<h1>Add new Student</h1>
+
+<%= form_tag 'createnewstudent' do %>
+
+<%= text_field_tag :studentname %><br>
+<%= text_field_tag :studentid%><br>
+<%= text_field_tag :stoppage%><br>
+<%= text_field_tag :contact%><br>
+
+<%= submit_tag "Create" %>
+
+<% end %>

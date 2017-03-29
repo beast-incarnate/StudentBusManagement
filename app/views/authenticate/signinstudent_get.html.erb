@@ -1,0 +1,13 @@
+
+
+<h1>Sign in as a Student</h1>
+
+<%= form_tag 'signinstudent' do %>
+
+<%= text_field_tag :username %><br>
+<%= password_field_tag :password %><br>
+<%= submit_tag "Login" %>
+
+<%= link_to 'Sign in as Admin' , '/signinadmin' %>
+
+<% end %>

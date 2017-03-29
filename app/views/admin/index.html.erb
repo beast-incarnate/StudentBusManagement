@@ -1,0 +1,20 @@
+<h1>Welcome</h1>
+
+<%= form_tag 'addnewstudent' do %>
+
+<%= submit_tag 'Add New Student' %>
+
+<% end %>
+
+<% @students.each do |student| %>
+
+<h2><%= student.name %></h2>
+<h2><%= student.studentId %></h2>
+<h2><%= student.contact %></h2>
+<h2><%= student.stoppage %></h2> 
+<h2><% if student.fees %>
+				Paid
+	<% else %>Not Paid</h2>
+<% end %>
+<% end %> 
+
