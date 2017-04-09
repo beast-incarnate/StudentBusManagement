@@ -1,1 +1,40 @@
-<h1>Hi</h1>
+
+
+
+
+<label> Name : </label>
+<strong><%= @student.name %></strong>
+<br>
+<label> Father's Name : </label>
+<strong><%= @student.fathers_name %></strong>
+<br>
+<label> Mother's Name : </label>
+<strong><%= @student.mothers_name %></strong>
+<br>
+<label> Address : </label>
+<strong><%= @student.address %></strong>
+<br>
+<label> Contact : </label>
+<strong><%= @student.contact %></strong>
+<br>
+<label> Username : </label>
+<strong><%= @student.username %></strong>
+<br>
+<label> Stoppage : </label>
+<strong><%= @student.stoppage %></strong>
+<br>
+<label> Fees : </label>
+<strong><% if @student.fees %> 
+					Paid 
+					<% else %>
+					Not Paid
+					<% end %>
+					</strong>
+<br>
+<label> Total : </label>
+<strong><%= @student.total %></strong>
+<br>
+<label> Present : </label>
+<strong><%= @student.present %></strong>
+
+

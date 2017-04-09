@@ -1,12 +1,71 @@
-<h1>Add new Student</h1>
 
-<%= form_tag 'createnewstudent' do %>
 
-<%= text_field_tag :studentname %><br>
-<%= text_field_tag :studentid%><br>
-<%= text_field_tag :stoppage%><br>
-<%= text_field_tag :contact%><br>
+<nav class = "navbar-inverse">
+<div class = "container-fluid">
+<div class = "navbar-header">
+<a class = "navbar-brand" href = "/">Hello, Shubham</a>
+</div>
 
-<%= submit_tag "Create" %>
+<ul class = "nav navbar-nav">
+<li><a href="/admin">View</a></li>
+<li class = "active"><a href = "/addstudent">Add Student</a></li>
+<li><a href = "">Add Stoppage</a></li>
+</ul>
+</div>
+</nav>
+<%= form_tag 'createnewstudent' , class: "form-inline" do %>
+
+<div class = "jumbotron vertical-center">
+<div class="card">
+<div class = "form-group">
+<label for = "name" >Name</label>
+<%= text_field_tag 'name' , nil , placeholder: 'Enter Name' , class: "form-control" %>
+</div>
+<br>
+<div class = "form-group">
+
+<label for = "fathersname" >Father's Name</label>
+<%= text_field_tag 'fathersname' , nil , placeholder: 'Enter Fathers Name' , class: "form-control" %>
+
+<br>
+<div class = "form-group">
+
+<label for = "mothersname" >Mother's Name</label>
+<%= text_field_tag 'mothersname' , nil , placeholder: 'Enter Mothers Name' , class: "form-control" %>
+
+</div>
+
+<br>
+<div class = "form-group">
+
+<label for = "address" >Address : </label>
+<%= text_field_tag 'address' , nil , placeholder: 'Enter Students Address' , class: "form-control" %>
+
+<br>
+<div class = "form-group">
+
+<label for = "contact" >Contact : </label>
+<%= number_field_tag 'contact' , nil  , max: 10 , min:10 , class: "form-control" %>
+
+<br>
+<div class = "form-group">
+
+<label for = "username" >UserName : </label>
+<%= text_field_tag 'username' , nil , placeholder: 'Enter User Name' , class: "form-control" %>
+
+<br>
+<div class = "form-group">
+
+<label for = "password" >Password : </label>
+<%= password_field_tag 'password' , nil , maxlength: 10 , class: "form-control" %>
+<br>
+<div class="form-group">
+<label for = "profile_picture">Student Picture : </label>
+<%= file_field_tag 'profile_picture' , class: "form-control" %> 
+</div>
+<br>
+<%= submit_tag 'Create' %>
 
 <% end %>
+</div>
+</div>

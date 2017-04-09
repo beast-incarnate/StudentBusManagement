@@ -4,7 +4,17 @@ class AdminController < ApplicationController
   def index
 
   	@students = Student.all
+    search = params[:search]
 
+    if search
+      @students.clear
+      @otherstudents = Student.all
+       @otherstudents.each do |student|
+          if student.name.include? search
+          @students << student
+          end 
+      end
+    end
   end
 
   def addnewstudent
